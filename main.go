@@ -7,6 +7,7 @@ import (
 	"asciifunc/ascii"
 )
 
+// Check banner files and allow the running of other functions.
 func main() {
 	if len(os.Args) < 2 || len(os.Args) > 3 {
 		fmt.Println("usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
@@ -18,17 +19,19 @@ func main() {
 
 	if len(os.Args) == 3 {
 		banner = os.Args[2]
+
+		switch banner {
+		case "shadow":
+			filenm = "shadow.txt"
+		case "thinkertoy":
+			filenm = "thinkertoy.txt"
+		case "zero":
+			filenm = "zero.txt"
+		default:
+			fmt.Println("usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
+			return
+		}
 	} else {
-		filenm = "standard.txt"
-	}
-
-	switch banner {
-	case "shadow":
-		filenm = "shadow.txt"
-
-	case "thinkertoy":
-		filenm = "thinkertoy.txt"
-	default:
 		filenm = "standard.txt"
 	}
 

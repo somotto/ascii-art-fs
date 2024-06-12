@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+// Reads the file and generates the ascii-art
+// the way it is from the banner files.
 func PrintChar(word, filename string) string {
 	out := ""
 	file, err := os.ReadFile(filename)

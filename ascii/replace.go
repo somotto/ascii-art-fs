@@ -2,6 +2,9 @@ package ascii
 
 import "strings"
 
+
+// Checks for non-printable escape sequences and
+// replaces them with their printable representations.
 func ReplaceNonPrintChar(words string) string {
 	words = strings.ReplaceAll(words, "\\t", "    ")
 	words = strings.ReplaceAll(words, "\\a", "\a")
