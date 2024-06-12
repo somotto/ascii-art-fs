@@ -27,6 +27,8 @@ func main() {
 			filenm = "thinkertoy.txt"
 		case "zero":
 			filenm = "zero.txt"
+		case "standard":
+			filenm = "standard.txt"
 		default:
 			fmt.Println("usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 			return
