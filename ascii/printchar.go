@@ -16,8 +16,9 @@ func PrintChar(word, filename string) string {
 		os.Exit(1)
 	}
 	// Handling empty files
-	if len(file) != 856 {
-		fmt.Println("Error: >> Banner files  is empty with length of: ", len(file))
+
+	if len(strings.Split(string(file), "\n")) != 856 {
+		fmt.Println("Error: >> Banner filecontent  is incomplete with length of: ", len(strings.Split(string(file), "\n")))
 		os.Exit(0)
 	}
 
